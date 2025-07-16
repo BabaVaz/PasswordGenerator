@@ -1,3 +1,26 @@
 body {
-    margin: 0;
+    margin: 52px 52px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #047857;
+    background-color: #C4B5FD;
+    font-size: 38px;
 }
+
+button {
+    text-align: center;
+    color: white;
+    background-color: #047857;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 16px 24px;
+}
+
+.password{
+    text-align: center;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 16px 44px;
+    border-radius: 6px;
+}
+
