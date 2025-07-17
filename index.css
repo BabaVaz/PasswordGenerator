@@ -1,5 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
-    margin: 52px 52px;
+    margin: 52 auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #047857;
     background-color: #C4B5FD;
@@ -8,28 +12,51 @@ body {
 }
 
 button {
-    text-align: center;
-    color: white;
-    background-color: #047857;
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
-    border-radius: 8px;
-    padding: 16px 24px;
+    background-color: #047857;
+    color: white;
+    width: 350px;
+    height: 50px;
+    margin: 8px auto;
+    padding: 16px 44px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 800;
 }
 
 .password{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 400;
     font-size: 16px;
     background-color: black;
     color: white;
     width: 350px;
-    height: 25px;
-    margin: 8 auto;
+    height: 50px;
+    margin: 8px auto;
     padding: 16px 44px;
     border-radius: 6px;
 }
 
 .password{
     cursor: pointer;
+}
+
+input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+}
+
+.Toogles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
 }

@@ -7,11 +7,17 @@
             <h1>Generate a</h1>
             <h1>random password</h1>
             <h3>Never use an insecure password again.</h3>
-            <button id="pass-Gen" onclick="PassGenerator()" >Generate Passwords</button>
         </div>
         <div class="Lower">
             <h2 class="Password" onclick="copyPassword()" id="Pass-1"></h2>
             <h2 class="Password" onclick="copyPassword()" id="Pass-2"></h2>
+            <button id="pass-Gen" onclick="PassGenerator()" >Generate Passwords</button>
+            <h2>Set password strength</h2>
+        <div class="Toogles">
+            <input type="checkbox" id="weakpassword" onchange="shortPASS()" name="shortpassword" value="yes"><label for="weakpassword">Short Password</label>
+            <input type="checkbox" id="Symbols" onchange="Symb()" name="Symbols" value="yes"><label for="Symbols">No Symbols</label>
+            <input type="checkbox" id="Numbers" onchange="Numb()" name="Numbers" value="yes"><label for="Numbers">No Numbers</label>
+        </div>
         </div>
         <script src="index.js"></script>
     </body>
