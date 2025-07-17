@@ -4,6 +4,7 @@ body {
     color: #047857;
     background-color: #C4B5FD;
     font-size: 38px;
+    text-align: center;
 }
 
 button {
@@ -16,11 +17,19 @@ button {
 }
 
 .password{
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     background-color: black;
     color: white;
+    width: 350px;
+    height: 25px;
+    margin: 8 auto;
     padding: 16px 44px;
     border-radius: 6px;
 }
 
+.password{
+    cursor: pointer;
+}
