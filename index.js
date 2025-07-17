@@ -12,7 +12,7 @@ let PASS2=document.getElementById("Pass-2")
 let Passshort=false
 let Sym=false
 let Num=false
-let Char=false
+let CreatedPass=[]
 
 function shortPASS(){
     Passshort=!Passshort;
@@ -22,6 +22,7 @@ function shortPASS(){
 function Symb(){
     Sym=!Sym;
     console.log("The new value is: ", Sym);
+    
 }
 
 function Numb(){
@@ -30,26 +31,51 @@ function Numb(){
 }
 
 function Generator(){
-    return Math.floor(Math.random()*characters.length)
+    return Math.floor(Math.random()*CreatedPass.length)
 }
 
 
 function PassGenerator(){
 PASS1.textContent=""
 password1=""
-let allowedcharacter= [Symbols + characters + Numbers]
-if (Sym===true){
-    allowedcharacter=[characters+Numbers]}
-    else if (Num===true){
-    allowedcharacter=[characters+Symbols]}
-    else if (Sym===true && Num===true){
-    allowedcharacter=[characters]    
-    }
+CreatedPass=[]
 
+if (Num===true && Sym===true)
+{
+    for (let i=0; i<characters.length; i++){
+    CreatedPass.push(characters[i])} 
+}
+    else if (Num===true)
+{
+    for (let i=0; i<characters.length; i++){
+    CreatedPass.push(characters[i])}
+
+    for (let i=0; i<Symbols.length; i++){
+    CreatedPass.push(Symbols[i])}
+}
+    else if(Sym===true)
+{
+    for (let i=0; i<characters.length; i++){
+    CreatedPass.push(characters[i])}
+    for (let i=0; i<Numbers.length; i++){
+    CreatedPass.push(Numbers[i])}
+}
+    
+    else 
+{
+    for (let i=0; i<characters.length; i++){
+    CreatedPass.push(characters[i])}
+
+    for (let i=0; i<Symbols.length; i++){
+    CreatedPass.push(Symbols[i])}
+    
+    for (let i=0; i<Numbers.length; i++){
+    CreatedPass.push(Numbers[i])}   
+}
 
     if (Passshort===false){
         for (i=0; i<16; i++){
-        let randomCharacter=characters[Generator()]
+        let randomCharacter=CreatedPass[Generator()]
         PASS1.textContent+=randomCharacter
         password1+=randomCharacter}}
     else if (Passshort===true){
@@ -62,7 +88,7 @@ PASS2.textContent=""
 password2=""
     if (Passshort===false){
         for (i=0; i<16; i++){
-        let randomCharacter=characters[Generator()]
+        let randomCharacter=CreatedPass[Generator()]
         PASS2.textContent+=randomCharacter
         password2+=randomCharacter}}
     else if (Passshort===true){
